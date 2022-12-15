@@ -5,7 +5,7 @@ import Home from "./routes/Home";
 import Photos from "./routes/Photos";
 import AddPhoto from "./routes/AddPhoto";
 import NotFound from "./routes/NotFound";
-import { url, studentName, studentId } from "./Task";
+import { studentName, studentId } from "./Task";
 const App = () => {
   return (
     <>
