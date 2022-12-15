@@ -11,7 +11,7 @@ const Photos = () => {
   const [error, setError] = useState(null);
 
   const deletePhoto = (id) => {
-    fetch(`http://localhost:3001/photos/${id}`, { method: "DELETE" })
+    fetch(`https://gallery-app-server.vercel.app/photos/${id}`, { method: "DELETE" })
       .then((response) => response.json())
       .then((photos) => {
         setPhotos(photos.filter((photos) => photos.id !== id));
@@ -20,7 +20,7 @@ const Photos = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3001/photos?_sort=id&_order=${sort}&q=${search}`)
+    fetch(`https://gallery-app-server.vercel.app/photos?_sort=id&_order=${sort}&q=${search}`)
       .then((response) => response.json())
       .then((json) => {
         setPhotos(json);
@@ -30,7 +30,7 @@ const Photos = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3001/photos`)
+    fetch(`https://gallery-app-server.vercel.app/photos`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json);

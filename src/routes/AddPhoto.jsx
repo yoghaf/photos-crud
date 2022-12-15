@@ -18,7 +18,7 @@ const AddPhoto = () => {
     data.secret = secret;
     console.log(data);
     const fetchData = async (data) => {
-      const response = await fetch(`http://localhost:3001/photos`, {
+      const response = await fetch(`https://gallery-app-server.vercel.app/photos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
